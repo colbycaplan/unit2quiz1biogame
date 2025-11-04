@@ -28,149 +28,275 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white p-6">
+<body class="bg-gray-900 text-white p-2 md:p-6">
 
-    <header class="text-center mb-8">
-        <h1 class="text-5xl font-bold text-cyan-400">Biology Brain-Teaser</h1>
+    <header class="text-center mb-4 md:mb-8">
+        <h1 class="text-3xl md:text-5xl font-bold text-cyan-400">Biology Brain-Teaser</h1>
     </header>
 
     <!-- Score Area -->
-    <div id="score-area" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg text-center">
-            <h2 class="text-lg font-semibold text-red-400">Player 1</h2>
-            <span id="p1-score" class="text-4xl font-bold">0</span>
+    <div id="score-area" class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-4 md:mb-8 max-w-4xl mx-auto">
+        <div class="bg-gray-700 p-3 md:p-4 rounded-lg shadow-lg text-center">
+            <h2 class="text-base md:text-lg font-semibold text-red-400">Player 1</h2>
+            <span id="p1-score" class="text-3xl md:text-4xl font-bold">0</span>
         </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg text-center">
-            <h2 class="text-lg font-semibold text-green-400">Player 2</h2>
-            <span id="p2-score" class="text-4xl font-bold">0</span>
+        <div class="bg-gray-700 p-3 md:p-4 rounded-lg shadow-lg text-center">
+            <h2 class="text-base md:text-lg font-semibold text-green-400">Player 2</h2>
+            <span id="p2-score" class="text-3xl md:text-4xl font-bold">0</span>
         </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg text-center">
-            <h2 class="text-lg font-semibold text-yellow-400">Player 3</h2>
-            <span id="p3-score" class="text-4xl font-bold">0</span>
+        <div class="bg-gray-700 p-3 md:p-4 rounded-lg shadow-lg text-center">
+            <h2 class="text-base md:text-lg font-semibold text-yellow-400">Player 3</h2>
+            <span id="p3-score" class="text-3xl md:text-4xl font-bold">0</span>
         </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg text-center">
-            <h2 class="text-lg font-semibold text-purple-400">Player 4</h2>
-            <span id="p4-score" class="text-4xl font-bold">0</span>
+        <div class="bg-gray-700 p-3 md:p-4 rounded-lg shadow-lg text-center">
+            <h2 class="text-base md:text-lg font-semibold text-purple-400">Player 4</h2>
+            <span id="p4-score" class="text-3xl md:text-4xl font-bold">0</span>
         </div>
     </div>
 
     <!-- Game Board -->
-    <div id="game-board" class="grid grid-cols-4 gap-2 max-w-5xl mx-auto">
+    <div id="game-board" class="grid grid-cols-8 gap-1 md:gap-2 max-w-screen-xl mx-auto">
         <!-- Category Headers -->
-        <div class="bg-blue-800 text-lg font-bold p-4 rounded-t-lg text-center h-20 flex items-center justify-center">Macromolecule Match-Up</div>
-        <div class="bg-blue-800 text-lg font-bold p-4 rounded-t-lg text-center h-20 flex items-center justify-center">Building & Breaking</div>
-        <div class="bg-blue-800 text-lg font-bold p-4 rounded-t-lg text-center h-20 flex items-center justify-center">The Enzyme Zone</div>
-        <div class="bg-blue-800 text-lg font-bold p-4 rounded-t-lg text-center h-20 flex items-center justify-center">Carbon & Co.</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">Macro Match-Up</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">Building & Breaking</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">The Enzyme Zone</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">Carbon & Co.</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">Protein & Lipid Details</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">Protein Structure</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">Name That Macro</div>
+        <div class="bg-blue-800 text-xs md:text-base font-bold p-2 rounded-t-lg text-center h-20 flex items-center justify-center">Functional Groups</div>
 
-        <!-- Questions - Row 1 (10 Points) -->
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <!-- Row 1 (10 Points) -->
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The four main categories of life's building blocks."
              data-answer="What are carbohydrates, lipids, proteins, and nucleic acids?">
             <span>10</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The reaction that joins two monomers by *removing* a water molecule."
              data-answer="What is dehydration synthesis (or condensation)?">
             <span>10</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="All enzymes are this type of macromolecule."
              data-answer="What is a protein?">
             <span>10</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="According to the HONC rule, this element forms 4 bonds."
              data-answer="What is carbon?">
             <span>10</span>
         </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="This type of fat has all single bonds in its fatty acid chains."
+             data-answer="What is a saturated fat?">
+            <span>10</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The first level of protein structure, which is just the order of amino acids."
+             data-answer="What is the Primary Structure?">
+            <span>10</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="I am a protein that speeds up chemical reactions."
+             data-answer="What is an enzyme?">
+            <span>10</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The -OH functional group."
+             data-answer="What is a hydroxyl group?">
+            <span>10</span>
+        </div>
 
-        <!-- Questions - Row 2 (20 Points) -->
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <!-- Row 2 (20 Points) -->
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The monomer of a protein."
              data-answer="What is an amino acid?">
             <span>20</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The reaction that *adds* water to *break* a bond in a polymer."
              data-answer="What is hydrolysis?">
             <span>20</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The specific location on an enzyme where the substrate binds."
              data-answer="What is the active site?">
             <span>20</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
-             data-question="The functional group written as -OH."
-             data-answer="What is a hydroxyl group?">
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The monomer of a nucleic acid."
+             data-answer="What is a nucleotide?">
+            <span>20</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="This type of fat has at least one double bond, causing a 'kink' in the chain."
+             data-answer="What is an unsaturated fat?">
+            <span>20</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="In the 'ON TEST!' analogy, the Primary Structure (order of amino acids) is compared to this."
+             data-answer="What is a Letter?">
+            <span>20</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="I am a carbohydrate used for food storage in *animals*."
+             data-answer="What is glycogen?">
+            <span>20</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The -COOH functional group."
+             data-answer="What is a carboxyl group?">
             <span>20</span>
         </div>
 
-        <!-- Questions - Row 3 (30 Points) -->
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <!-- Row 3 (30 Points) -->
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="Starch (plants) and glycogen (animals) are storage forms of this macromolecule."
              data-answer="What is a carbohydrate (polysaccharide)?">
             <span>30</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The specific name for the bond that links amino acids."
              data-answer="What is a peptide bond?">
             <span>30</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="Enzymes speed up reactions by lowering this 'energy bump.'"
              data-answer="What is activation energy?">
             <span>30</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
-             data-question="This functional group, -COOH, is found in amino acids and fatty acids."
-             data-answer="What is a carboxyl group?">
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The monomer of a carbohydrate."
+             data-answer="What is a monosaccharide?">
+            <span>30</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="There are approximately this many different types of amino acids."
+             data-answer="What is 20?">
+            <span>30</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The second level of structure, which includes folding into patterns like helices and sheets."
+             data-answer="What is the Secondary Structure?">
+            <span>30</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="I am a carbohydrate used for food storage in *plants*."
+             data-answer="What is starch?">
+            <span>30</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The -NH₂ functional group, a key part of amino acids."
+             data-answer="What is an amino group?">
             <span>30</span>
         </div>
 
-        <!-- Questions - Row 4 (40 Points) -->
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <!-- Row 4 (40 Points) -->
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="This part of an amino acid, designated 'R,' is what makes each one different."
              data-answer="What is the R-group (or side chain)?">
             <span>40</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="If you build a polymer from 51 monosaccharides, this many water molecules are produced."
              data-answer="What is 50?">
             <span>40</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The process where an enzyme loses its shape and function due to high heat or pH changes."
              data-answer="What is denaturation?">
             <span>40</span>
         </div>
-        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-24 flex items-center justify-center text-4xl font-bold rounded-lg shadow-md"
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
              data-question="The three parts of a nucleotide."
              data-answer="What are a 5-carbon sugar, a phosphate group, and a nitrogen base?">
             <span>40</span>
         </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="In the protein structure analogy, Quaternary structure (multiple proteins) is compared to this."
+             data-answer="What is a paragraph?">
+            <span>40</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The unique 3D folding of the secondary structure, which determines the protein's function."
+             data-answer="What is the Tertiary Structure?">
+            <span>40</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="I am the 'blueprint of life' and contain instructions for making proteins."
+             data-answer="What is DNA?">
+            <span>40</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="This functional group is found in nucleic acids and is part of ATP."
+             data-answer="What is a phosphate group?">
+            <span>40</span>
+        </div>
+        
+        <!-- Row 5 (50 Points) -->
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="This polysaccharide is used for structural support in plants."
+             data-answer="What is cellulose?">
+            <span>50</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The specific name for a molecule, like sucrose, made of two monosaccharides."
+             data-answer="What is a disaccharide?">
+            <span>50</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The name for the molecule formed when an enzyme and substrate are bound together."
+             data-answer="What is the enzyme-substrate complex?">
+            <span>50</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The two types of nucleic acids."
+             data-answer="What are DNA and RNA?">
+            <span>50</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="Besides temperature and pH, this factor also affects enzyme reaction rate."
+             data-answer="What is enzyme concentration?">
+            <span>50</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The level of structure where multiple proteins fit together to make a functional enzyme."
+             data-answer="What is the Quaternary Structure?">
+            <span>50</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="I am a lipid that is unsaturated, from plant sources, and liquid at room temperature."
+             data-answer="What is an oil?">
+            <span>50</span>
+        </div>
+        <div class="question-cell bg-blue-600 hover:bg-blue-500 cursor-pointer h-20 flex items-center justify-center text-xl md:text-2xl font-bold rounded-lg shadow-md"
+             data-question="The two functional groups that every single amino acid has."
+             data-answer="What are an amino group and a carboxyl group?">
+            <span>50</span>
+        </div>
     </div>
 
     <!-- Reset Button -->
-    <div class="text-center mt-8">
+    <div class="text-center mt-6 md:mt-8">
         <button id="reset-game" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg shadow-md">
             Reset Game
         </button>
     </div>
 
     <!-- Modal for Question/Answer -->
-    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden p-4">
-        <div id="question-modal" class="bg-white text-gray-900 p-8 rounded-lg shadow-xl w-full max-w-2xl text-center">
-            <p class="text-2xl font-semibold mb-6" id="modal-question">Question text goes here</p>
+    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden p-4 z-50">
+        <div id="question-modal" class="bg-white text-gray-900 p-6 md:p-8 rounded-lg shadow-xl w-full max-w-2xl text-center">
+            <p class="text-lg md:text-2xl font-semibold mb-6" id="modal-question">Question text goes here</p>
             
             <button id="show-answer" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-lg mb-4">
                 Show Answer
             </button>
             
-            <p id="modal-answer" class="text-2xl font-bold text-blue-700 mb-6 hidden">Answer text goes here</p>
+            <p id="modal-answer" class="text-lg md:text-2xl font-bold text-blue-700 mb-6 hidden">Answer text goes here</p>
             
             <div id="award-points-wrapper" class="hidden">
-                <h3 class="text-lg font-semibold mb-2">Award points to:</h3>
+                <h3 class="text-md md:text-lg font-semibold mb-2">Award points to:</h3>
                 <div id="award-points" class="flex flex-wrap justify-center gap-2">
                     <button data-player="p1" class="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-lg">Player 1</button>
                     <button data-player="p2" class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-lg">Player 2</button>
@@ -258,28 +384,7 @@
             
             // Reset Game
             resetButton.addEventListener('click', () => {
-                // Reset scores
-                scores = { p1: 0, p2: 0, p3: 0, p4: 0 };
-                updateScoreboard();
-                
-                // Reset game board
-                const allCells = document.querySelectorAll('.question-cell');
-                allCells.forEach(cell => {
-                    cell.classList.remove('answered');
-                    // Get points from data-question... no, just re-find the span
-                    const points = cell.dataset.question.includes('10') ? '10' : // This is a bit of a hack, let's fix
-                                   cell.querySelector('span').dataset.points; // Let's re-add the span content
-                    
-                    const pointsSpan = cell.querySelector('span');
-                    if (pointsSpan) {
-                        pointsSpan.style.visibility = 'visible';
-                    }
-                    // A better way for reset
-                    cell.style.opacity = '1';
-                    cell.style.cursor = 'pointer';
-                });
-                
-                // A more robust reset
+                // A simple and effective way to reset the game state
                 window.location.reload();
             });
 
@@ -307,3 +412,4 @@
     </script>
 </body>
 </html>
+
